@@ -1,0 +1,4 @@
+[INFO] [05-04-2022 10:18:18] Info message
+[WARN] [05-04-2022 10:18:18] Warn message
+[ERROR] [05-04-2022 10:18:18] Error message
+[FATAL] [05-04-2022 10:18:18] Fatal message
