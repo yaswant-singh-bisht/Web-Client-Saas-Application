@@ -5,7 +5,7 @@
     <classes>
       <class name="unittest.UnitTest">
         <methods>
-          <include name="test"/>
+          <include name="ReportClass"/>
         </methods>
       </class> <!-- unittest.UnitTest -->
     </classes>

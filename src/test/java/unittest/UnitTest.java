@@ -1,11 +1,9 @@
 package unittest;
 
-import java.time.LocalDateTime;
-import java.time.format.DateTimeFormatter;
-import java.util.Date;
-
 import org.testng.annotations.Test;
+
 import com.saas.app.reports.Log;
+import com.saas.app.reports.Report;
 
 public class UnitTest {
 //	@Test
@@ -19,6 +17,19 @@ public class UnitTest {
 //		Log.fatal("Fatal message");
 //	}
 
-	
+	@Test
+	public void ReportClass() throws InterruptedException {
+		Log.initializeLog();
+		Report.startTest("StartTest", "Report test started");
+		Report.info("Info", "Info message");
+		Report.pass("Pass", "Pass message", false);
+//		Report.pass("PassScreenshot", "Pass message with screenshot", true);
+		Report.fail("Fail", "Fail message", false);
+//		Report.fail("FailScreenshot", "Fail message with Screenshot", true);
+		Report.Warn("Warn", "Warn message");
+		Report.fatal("Fatal", "Fatal message");
+		Report.flush();
+		Report.endTest();
+	}
 	
 }
