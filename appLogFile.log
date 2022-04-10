@@ -1,0 +1,16 @@
+[INFO] [10-04-2022 10:49:10] Loading properties for D:\Selenium\Web Client Saas Application\src\test\resources\ProjectRepository\Config.properties
+[INFO] [10-04-2022 10:49:10] Launching browser: firefox
+[INFO] [10-04-2022 10:49:17] Browser launched successfully
+[INFO] [10-04-2022 10:49:17] Launching URL: https://ui.freecrm.com/
+[INFO] [10-04-2022 10:49:19] URL launched successfully
+[INFO] [10-04-2022 10:49:19] Start ********** TC_LoginPage: Verify Login page ********** Start
+[INFO] [10-04-2022 10:49:22] Decrpted text
+[INFO] [10-04-2022 10:49:28] End ********** TC_LoginPage: Verify Login page ********** End
+[INFO] [10-04-2022 10:49:28] Start ********** TC_HomePage: Verify Home page ********** Start
+[INFO] [10-04-2022 10:49:28] End ********** TC_HomePage: Verify Home page ********** End
+[INFO] [10-04-2022 10:49:28] Start ********** TC_ContactsPage: Verify Contacts page ********** Start
+[INFO] [10-04-2022 10:49:46] End ********** TC_ContactsPage: Verify Contacts page ********** End
+[INFO] [10-04-2022 10:49:46] Start ********** TC_LogoutPage: Verify that logout is successful and user is redirected to login page ********** Start
+[INFO] [10-04-2022 10:49:46] End ********** TC_LogoutPage: Verify that logout is successful and user is redirected to login page ********** End
+[INFO] [10-04-2022 10:49:46] Closing driver instance
+[INFO] [10-04-2022 10:49:48] Driver closed successfully

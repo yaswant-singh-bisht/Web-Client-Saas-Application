@@ -5,7 +5,9 @@
     <classes>
       <class name="unittest.UnitTest">
         <methods>
-          <include name="ReportClass"/>
+          <include name="shutDownEnvironment"/>
+          <include name="test"/>
+          <include name="initEnvironment"/>
         </methods>
       </class> <!-- unittest.UnitTest -->
     </classes>

@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "https://testng.org/testng-1.0.dtd">
+<suite thread-count="1" name="Failed suite [WebClientSaasAppSuite]" guice-stage="DEVELOPMENT">
+  <test thread-count="1" name="WebClientSaasAppTest(failed)">
+    <classes>
+      <class name="com.saas.app.testCases.TC_LogoutPage">
+        <methods>
+          <include name="logoutPageTest"/>
+          <include name="shutDownEnvironment"/>
+          <include name="initEnvironment"/>
+        </methods>
+      </class> <!-- com.saas.app.testCases.TC_LogoutPage -->
+    </classes>
+  </test> <!-- WebClientSaasAppTest(failed) -->
+</suite> <!-- Failed suite [WebClientSaasAppSuite] -->

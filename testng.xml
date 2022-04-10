@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "https://testng.org/testng-1.0.dtd">
+<suite thread-count="1" name="WebClientSaasAppSuite">
+  <test thread-count="1" name="WebClientSaasAppTest">
+    <classes>
+      <class name="com.saas.app.testCases.TC_LoginPage"/>
+      <class name="com.saas.app.testCases.TC_HomePage"/>
+      <class name="com.saas.app.testCases.TC_ContactsPage"/>
+      <class name="com.saas.app.testCases.TC_LogoutPage"/>
+    </classes>
+  </test> <!-- WebClientSaasAppTest -->
+</suite> <!-- WebClientSaasAppSuite -->
