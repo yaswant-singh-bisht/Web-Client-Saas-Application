@@ -29,7 +29,7 @@ public class HomePage extends BaseClass {
 	WebElement taskContacts;
 		
 	// Actions	
-	public boolean userNameExists() {
+	public boolean isUserNameExists() {
 		boolean present = false;
 		if (lblUserFullName.isDisplayed()) {
 			return true;	

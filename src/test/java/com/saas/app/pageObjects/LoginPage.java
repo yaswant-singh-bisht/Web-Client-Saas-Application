@@ -18,7 +18,7 @@ public class LoginPage extends BaseClass {
 	// Page factory object repository
 	@FindBy(xpath = "//*[@name='email']")
 	@CacheLookup
-	WebElement txtUserName;
+	WebElement txtEmail;
 	
 	@FindBy(xpath = "//*[@name='password']")
 	@CacheLookup
@@ -30,8 +30,16 @@ public class LoginPage extends BaseClass {
 
 	// Actions	
 	public void login() {
-		txtUserName.sendKeys(Utilities.Config_Properties.getProperty("username"));
+		txtEmail.sendKeys(Utilities.Config_Properties.getProperty("username"));
 		txtPassword.sendKeys(Utilities.decryptPassword(Utilities.Config_Properties.getProperty("password")));
 		btnLogin.click();
+	}
+	
+	public boolean isEmailExists() {
+		boolean present = false;
+		if (txtEmail.isDisplayed()) {
+			return true;	
+		}
+		return present;
 	}
 }

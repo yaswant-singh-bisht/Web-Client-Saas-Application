@@ -26,7 +26,7 @@
       <span class="top-banner-title-font">Test results</span>
       <button id="button" class="button">Switch Retro Theme</button> <!-- button -->
       <br/>
-      <span class="top-banner-font-1">1 suite</span>
+      <span class="top-banner-font-1">1 suite, 1 failed test</span>
     </div> <!-- top-banner-root -->
     <div class="navigator-root">
       <div class="navigator-suite-header">
@@ -40,7 +40,7 @@
         <div class="rounded-window">
           <div class="suite-header light-rounded-window-top">
             <a href="#" panel-name="suite-WebClientSaasAppSuite" class="navigator-link">
-              <span class="suite-name border-passed">WebClientSaasAppSuite</span>
+              <span class="suite-name border-failed">WebClientSaasAppSuite</span>
             </a> <!-- navigator-link -->
           </div> <!-- suite-header light-rounded-window-top -->
           <div class="navigator-suite-content">
@@ -93,7 +93,21 @@
               <div class="suite-section-content">
                 <ul>
                   <li>
-                    <span class="method-stats">8 methods,   8 passed</span>
+                    <span class="method-stats">4 methods, 1 failed,   3 passed</span>
+                  </li>
+                  <li>
+                    <span class="method-list-title failed">Failed methods</span>
+                    <span class="show-or-hide-methods failed">
+                      <a href="#" panel-name="suite-WebClientSaasAppSuite" class="hide-methods failed suite-WebClientSaasAppSuite"> (hide)</a> <!-- hide-methods failed suite-WebClientSaasAppSuite -->
+                      <a href="#" panel-name="suite-WebClientSaasAppSuite" class="show-methods failed suite-WebClientSaasAppSuite"> (show)</a> <!-- show-methods failed suite-WebClientSaasAppSuite -->
+                    </span>
+                    <div class="method-list-content failed suite-WebClientSaasAppSuite">
+                      <span>
+                        <img src="failed.png" width="3%"/>
+                        <a href="#" panel-name="suite-WebClientSaasAppSuite" title="com.saas.app.testCases.TC_LogoutPage" class="method navigator-link" hash-for-method="logoutPageTest">logoutPageTest</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                    </div> <!-- method-list-content failed suite-WebClientSaasAppSuite -->
                   </li>
                   <li>
                     <span class="method-list-title passed">Passed methods</span>
@@ -104,37 +118,12 @@
                     <div class="method-list-content passed suite-WebClientSaasAppSuite">
                       <span>
                         <img src="passed.png" width="3%"/>
-                        <a href="#" panel-name="suite-WebClientSaasAppSuite" title="com.saas.app.testCases.TC_LogoutPage" class="method navigator-link" hash-for-method="logoutPageTest">logoutPageTest</a> <!-- method navigator-link -->
-                      </span>
-                      <br/>
-                      <span>
-                        <img src="passed.png" width="3%"/>
-                        <a href="#" panel-name="suite-WebClientSaasAppSuite" title="com.saas.app.testCases.TC_ContactsPage" class="method navigator-link" hash-for-method="valCreateNewContact(Name3, Testcust3)">valCreateNewContact(Name3, Testcust3)</a> <!-- method navigator-link -->
-                      </span>
-                      <br/>
-                      <span>
-                        <img src="passed.png" width="3%"/>
-                        <a href="#" panel-name="suite-WebClientSaasAppSuite" title="com.saas.app.testCases.TC_ContactsPage" class="method navigator-link" hash-for-method="valCreateNewContact(Name4, Testcust4)">valCreateNewContact(Name4, Testcust4)</a> <!-- method navigator-link -->
-                      </span>
-                      <br/>
-                      <span>
-                        <img src="passed.png" width="3%"/>
-                        <a href="#" panel-name="suite-WebClientSaasAppSuite" title="com.saas.app.testCases.TC_ContactsPage" class="method navigator-link" hash-for-method="valCreateNewContact(Name1, Testcust1)">valCreateNewContact(Name1, Testcust1)</a> <!-- method navigator-link -->
-                      </span>
-                      <br/>
-                      <span>
-                        <img src="passed.png" width="3%"/>
-                        <a href="#" panel-name="suite-WebClientSaasAppSuite" title="com.saas.app.testCases.TC_ContactsPage" class="method navigator-link" hash-for-method="valCreateNewContact(Name6, Testcust6)">valCreateNewContact(Name6, Testcust6)</a> <!-- method navigator-link -->
-                      </span>
-                      <br/>
-                      <span>
-                        <img src="passed.png" width="3%"/>
                         <a href="#" panel-name="suite-WebClientSaasAppSuite" title="com.saas.app.testCases.TC_ContactsPage" class="method navigator-link" hash-for-method="valCreateNewContact(Name2, Testcust2)">valCreateNewContact(Name2, Testcust2)</a> <!-- method navigator-link -->
                       </span>
                       <br/>
                       <span>
                         <img src="passed.png" width="3%"/>
-                        <a href="#" panel-name="suite-WebClientSaasAppSuite" title="com.saas.app.testCases.TC_ContactsPage" class="method navigator-link" hash-for-method="valCreateNewContact(Name5, Testcust5)">valCreateNewContact(Name5, Testcust5)</a> <!-- method navigator-link -->
+                        <a href="#" panel-name="suite-WebClientSaasAppSuite" title="com.saas.app.testCases.TC_ContactsPage" class="method navigator-link" hash-for-method="valCreateNewContact(Name1, Testcust1)">valCreateNewContact(Name1, Testcust1)</a> <!-- method navigator-link -->
                       </span>
                       <br/>
                       <span>
@@ -154,6 +143,26 @@
     <div class="wrapper">
       <div class="main-panel-root">
         <div panel-name="suite-WebClientSaasAppSuite" class="panel WebClientSaasAppSuite">
+          <div class="suite-WebClientSaasAppSuite-class-failed">
+            <div class="main-panel-header rounded-window-top">
+              <img src="failed.png"/>
+              <span class="class-name">com.saas.app.testCases.TC_LogoutPage</span>
+            </div> <!-- main-panel-header rounded-window-top -->
+            <div class="main-panel-content rounded-window-bottom">
+              <div class="method">
+                <div class="method-content">
+                  <a name="logoutPageTest">
+                  </a> <!-- logoutPageTest -->
+                  <span class="method-name">logoutPageTest</span>
+                  <div class="stack-trace">java.lang.AssertionError: expected [true] but found [false]
+	at com.saas.app.testCases.TC_LogoutPage.logoutPageTest(TC_LogoutPage.java:21)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1541)
+... Removed 31 stack frames
+</div> <!-- stack-trace -->
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+            </div> <!-- main-panel-content rounded-window-bottom -->
+          </div> <!-- suite-WebClientSaasAppSuite-class-failed -->
           <div class="suite-WebClientSaasAppSuite-class-passed">
             <div class="main-panel-header rounded-window-top">
               <img src="passed.png"/>
@@ -177,38 +186,6 @@
             <div class="main-panel-content rounded-window-bottom">
               <div class="method">
                 <div class="method-content">
-                  <a name="valCreateNewContact(Name3, Testcust3)">
-                  </a> <!-- valCreateNewContact(Name3, Testcust3) -->
-                  <span class="method-name">valCreateNewContact</span>
-                  <span class="parameters">(Name3, Testcust3)</span>
-                </div> <!-- method-content -->
-              </div> <!-- method -->
-              <div class="method">
-                <div class="method-content">
-                  <a name="valCreateNewContact(Name4, Testcust4)">
-                  </a> <!-- valCreateNewContact(Name4, Testcust4) -->
-                  <span class="method-name">valCreateNewContact</span>
-                  <span class="parameters">(Name4, Testcust4)</span>
-                </div> <!-- method-content -->
-              </div> <!-- method -->
-              <div class="method">
-                <div class="method-content">
-                  <a name="valCreateNewContact(Name1, Testcust1)">
-                  </a> <!-- valCreateNewContact(Name1, Testcust1) -->
-                  <span class="method-name">valCreateNewContact</span>
-                  <span class="parameters">(Name1, Testcust1)</span>
-                </div> <!-- method-content -->
-              </div> <!-- method -->
-              <div class="method">
-                <div class="method-content">
-                  <a name="valCreateNewContact(Name6, Testcust6)">
-                  </a> <!-- valCreateNewContact(Name6, Testcust6) -->
-                  <span class="method-name">valCreateNewContact</span>
-                  <span class="parameters">(Name6, Testcust6)</span>
-                </div> <!-- method-content -->
-              </div> <!-- method -->
-              <div class="method">
-                <div class="method-content">
                   <a name="valCreateNewContact(Name2, Testcust2)">
                   </a> <!-- valCreateNewContact(Name2, Testcust2) -->
                   <span class="method-name">valCreateNewContact</span>
@@ -217,25 +194,10 @@
               </div> <!-- method -->
               <div class="method">
                 <div class="method-content">
-                  <a name="valCreateNewContact(Name5, Testcust5)">
-                  </a> <!-- valCreateNewContact(Name5, Testcust5) -->
+                  <a name="valCreateNewContact(Name1, Testcust1)">
+                  </a> <!-- valCreateNewContact(Name1, Testcust1) -->
                   <span class="method-name">valCreateNewContact</span>
-                  <span class="parameters">(Name5, Testcust5)</span>
-                </div> <!-- method-content -->
-              </div> <!-- method -->
-            </div> <!-- main-panel-content rounded-window-bottom -->
-          </div> <!-- suite-WebClientSaasAppSuite-class-passed -->
-          <div class="suite-WebClientSaasAppSuite-class-passed">
-            <div class="main-panel-header rounded-window-top">
-              <img src="passed.png"/>
-              <span class="class-name">com.saas.app.testCases.TC_LogoutPage</span>
-            </div> <!-- main-panel-header rounded-window-top -->
-            <div class="main-panel-content rounded-window-bottom">
-              <div class="method">
-                <div class="method-content">
-                  <a name="logoutPageTest">
-                  </a> <!-- logoutPageTest -->
-                  <span class="method-name">logoutPageTest</span>
+                  <span class="parameters">(Name1, Testcust1)</span>
                 </div> <!-- method-content -->
               </div> <!-- method -->
             </div> <!-- main-panel-content rounded-window-bottom -->
@@ -294,44 +256,28 @@ data.addColumn('number', 'Number');
 data.addColumn('string', 'Method');
 data.addColumn('string', 'Class');
 data.addColumn('number', 'Time (ms)');
-data.addRows(8);
+data.addRows(4);
 data.setCell(0, 0, 0)
 data.setCell(0, 1, 'valLoginPageTest')
 data.setCell(0, 2, 'com.saas.app.testCases.TC_LoginPage')
-data.setCell(0, 3, 4660);
+data.setCell(0, 3, 8344);
 data.setCell(1, 0, 1)
 data.setCell(1, 1, 'valCreateNewContact')
 data.setCell(1, 2, 'com.saas.app.testCases.TC_ContactsPage')
-data.setCell(1, 3, 4650);
+data.setCell(1, 3, 5829);
 data.setCell(2, 0, 2)
 data.setCell(2, 1, 'valCreateNewContact')
 data.setCell(2, 2, 'com.saas.app.testCases.TC_ContactsPage')
-data.setCell(2, 3, 4450);
+data.setCell(2, 3, 4461);
 data.setCell(3, 0, 3)
-data.setCell(3, 1, 'valCreateNewContact')
-data.setCell(3, 2, 'com.saas.app.testCases.TC_ContactsPage')
-data.setCell(3, 3, 4412);
-data.setCell(4, 0, 4)
-data.setCell(4, 1, 'valCreateNewContact')
-data.setCell(4, 2, 'com.saas.app.testCases.TC_ContactsPage')
-data.setCell(4, 3, 4372);
-data.setCell(5, 0, 5)
-data.setCell(5, 1, 'valCreateNewContact')
-data.setCell(5, 2, 'com.saas.app.testCases.TC_ContactsPage')
-data.setCell(5, 3, 4371);
-data.setCell(6, 0, 6)
-data.setCell(6, 1, 'valCreateNewContact')
-data.setCell(6, 2, 'com.saas.app.testCases.TC_ContactsPage')
-data.setCell(6, 3, 4298);
-data.setCell(7, 0, 7)
-data.setCell(7, 1, 'logoutPageTest')
-data.setCell(7, 2, 'com.saas.app.testCases.TC_LogoutPage')
-data.setCell(7, 3, 483);
+data.setCell(3, 1, 'logoutPageTest')
+data.setCell(3, 2, 'com.saas.app.testCases.TC_LogoutPage')
+data.setCell(3, 3, 1011);
 window.suiteTableData['WebClientSaasAppSuite']= { tableData: data, tableDiv: 'times-div-WebClientSaasAppSuite'}
 return data;
 }
               </script>
-              <span class="suite-total-time">Total running time: 31 seconds</span>
+              <span class="suite-total-time">Total running time: 19 seconds</span>
               <div id="times-div-WebClientSaasAppSuite">
               </div> <!-- times-div-WebClientSaasAppSuite -->
             </div> <!-- times-div -->
@@ -382,48 +328,34 @@ return data;
               </div> <!-- configuration-suite before -->
               <div class="test-method">
                 <span class="method-name">valLoginPageTest</span>
-                <span class="method-start">12909 ms</span>
+                <span class="method-start">38145 ms</span>
               </div> <!-- test-method -->
             </div> <!-- chronological-class -->
             <div class="chronological-class">
               <div class="chronological-class-name">com.saas.app.testCases.TC_ContactsPage</div> <!-- chronological-class-name -->
               <div class="test-method">
                 <span class="method-name">valCreateNewContact(Name1, Testcust1)</span>
-                <span class="method-start">18179 ms</span>
+                <span class="method-start">48711 ms</span>
               </div> <!-- test-method -->
               <div class="test-method">
                 <span class="method-name">valCreateNewContact(Name2, Testcust2)</span>
-                <span class="method-start">22829 ms</span>
-              </div> <!-- test-method -->
-              <div class="test-method">
-                <span class="method-name">valCreateNewContact(Name3, Testcust3)</span>
-                <span class="method-start">27254 ms</span>
-              </div> <!-- test-method -->
-              <div class="test-method">
-                <span class="method-name">valCreateNewContact(Name4, Testcust4)</span>
-                <span class="method-start">31629 ms</span>
-              </div> <!-- test-method -->
-              <div class="test-method">
-                <span class="method-name">valCreateNewContact(Name5, Testcust5)</span>
-                <span class="method-start">35927 ms</span>
-              </div> <!-- test-method -->
-              <div class="test-method">
-                <span class="method-name">valCreateNewContact(Name6, Testcust6)</span>
-                <span class="method-start">40377 ms</span>
+                <span class="method-start">54540 ms</span>
               </div> <!-- test-method -->
             </div> <!-- chronological-class -->
             <div class="chronological-class">
               <div class="chronological-class-name">com.saas.app.testCases.TC_LogoutPage</div> <!-- chronological-class-name -->
               <div class="test-method">
+                <img src="failed.png">
+                </img>
                 <span class="method-name">logoutPageTest</span>
-                <span class="method-start">44749 ms</span>
+                <span class="method-start">59001 ms</span>
               </div> <!-- test-method -->
             </div> <!-- chronological-class -->
             <div class="chronological-class">
               <div class="chronological-class-name">com.saas.app.testCases.TC_LoginPage</div> <!-- chronological-class-name -->
               <div class="configuration-suite after">
                 <span class="method-name">shutDownEnvironment</span>
-                <span class="method-start">45271 ms</span>
+                <span class="method-start">60386 ms</span>
               </div> <!-- configuration-suite after -->
           </div> <!-- main-panel-content rounded-window-bottom -->
         </div> <!-- panel -->

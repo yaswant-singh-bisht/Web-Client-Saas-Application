@@ -1,5 +1,6 @@
 package com.saas.app.testCases;
 
+import org.testng.Assert;
 import org.testng.annotations.DataProvider;
 import org.testng.annotations.Test;
 import com.saas.app.constants.Constants;
@@ -23,10 +24,12 @@ public class TC_ContactsPage extends BaseClass {
 
 		ContactsPage cp = new ContactsPage(driver);
 		cp.createNewContact(FName, LName);
-		String name = cp.isContactCreated();
+		
 		Thread.sleep(2000);
-		System.out.println("Name is - " + name);
-//		Assert.assertEquals(name, FName+" "+LName);
+		
+		ContactsPage cp1 = new ContactsPage(driver); // Reinitializing page object so that saved value is considered
+		String fullName = cp1.isContactCreated();
+		Assert.assertEquals(fullName, FName+" "+LName);
 		
 		Report.endTestReport("TC_ContactsPage", "Verify Contacts page");
 	}

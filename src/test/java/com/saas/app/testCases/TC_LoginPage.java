@@ -18,7 +18,7 @@ public class TC_LoginPage extends BaseClass {
 		lp.login();
 
 		HomePage hp = new HomePage(driver);
-		boolean present = hp.userNameExists();		
+		boolean present = hp.isUserNameExists();		
 		Assert.assertTrue(present);
 		
 		Report.endTestReport("TC_LoginPage", "Verify Login page");

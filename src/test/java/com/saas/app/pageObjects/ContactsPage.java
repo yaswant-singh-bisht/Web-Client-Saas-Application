@@ -6,8 +6,6 @@ import org.openqa.selenium.support.CacheLookup;
 import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.PageFactory;
 
-import com.saas.app.utils.Utilities;
-
 public class ContactsPage extends BaseClass {
 	// Initializing the page object
 		public ContactsPage(WebDriver driver){
