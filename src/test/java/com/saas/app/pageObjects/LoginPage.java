@@ -6,6 +6,8 @@ import org.openqa.selenium.support.CacheLookup;
 import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.PageFactory;
 
+import com.saas.app.utils.Utilities;
+
 public class LoginPage extends BaseClass {
 	
 	// Initializing the page object
@@ -27,15 +29,9 @@ public class LoginPage extends BaseClass {
 	WebElement btnLogin;
 
 	// Actions	
-	public void setUserName(String userName) {
-		txtUserName.sendKeys(userName);
-	}
-	
-	public void setPassword(String password) {
-		txtPassword.sendKeys(password);
-	}
-	
-	public void clickLogin() {
+	public void login() {
+		txtUserName.sendKeys(Utilities.Config_Properties.getProperty("username"));
+		txtPassword.sendKeys(Utilities.decryptPassword(Utilities.Config_Properties.getProperty("password")));
 		btnLogin.click();
 	}
 }

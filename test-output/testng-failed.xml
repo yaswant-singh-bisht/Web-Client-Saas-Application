@@ -1,15 +1,15 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE suite SYSTEM "https://testng.org/testng-1.0.dtd">
-<suite name="Failed suite [Default suite]" guice-stage="DEVELOPMENT">
-  <test thread-count="5" name="Default test(failed)">
+<suite thread-count="1" name="Failed suite [WebClientSaasAppSuite]" guice-stage="DEVELOPMENT">
+  <test thread-count="1" name="WebClientSaasAppTest(failed)">
     <classes>
-      <class name="unittest.UnitTest">
+      <class name="com.saas.app.testCases.TC_ContactsPage">
         <methods>
           <include name="shutDownEnvironment"/>
-          <include name="test"/>
+          <include name="valCreateNewContact" invocation-numbers="1"/>
           <include name="initEnvironment"/>
         </methods>
-      </class> <!-- unittest.UnitTest -->
+      </class> <!-- com.saas.app.testCases.TC_ContactsPage -->
     </classes>
-  </test> <!-- Default test(failed) -->
-</suite> <!-- Failed suite [Default suite] -->
+  </test> <!-- WebClientSaasAppTest(failed) -->
+</suite> <!-- Failed suite [WebClientSaasAppSuite] -->

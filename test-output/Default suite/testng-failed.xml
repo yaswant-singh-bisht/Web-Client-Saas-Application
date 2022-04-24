@@ -3,13 +3,13 @@
 <suite name="Failed suite [Default suite]" guice-stage="DEVELOPMENT">
   <test thread-count="5" name="Default test(failed)">
     <classes>
-      <class name="unittest.UnitTest">
+      <class name="com.saas.app.testCases.TC_LoginPage">
         <methods>
           <include name="shutDownEnvironment"/>
-          <include name="test"/>
           <include name="initEnvironment"/>
+          <include name="registerUser"/>
         </methods>
-      </class> <!-- unittest.UnitTest -->
+      </class> <!-- com.saas.app.testCases.TC_LoginPage -->
     </classes>
   </test> <!-- Default test(failed) -->
 </suite> <!-- Failed suite [Default suite] -->

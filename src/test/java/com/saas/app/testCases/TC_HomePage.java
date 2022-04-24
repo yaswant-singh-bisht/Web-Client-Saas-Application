@@ -1,9 +1,7 @@
 package com.saas.app.testCases;
 
-import org.testng.Assert;
 import org.testng.annotations.Test;
 import com.saas.app.pageObjects.BaseClass;
-import com.saas.app.pageObjects.HomePage;
 import com.saas.app.reports.Report;
 
 public class TC_HomePage extends BaseClass {
@@ -12,10 +10,7 @@ public class TC_HomePage extends BaseClass {
 	public static void homePageTest() throws InterruptedException {
 		Report.startTestReport("TC_HomePage", "Verify Home page");
 
-		HomePage hp = new HomePage(driver);
-		boolean present = hp.userNameExists();
 		
-		Assert.assertTrue(present);
 		
 		Report.endTestReport("TC_HomePage", "Verify Home page");
 		

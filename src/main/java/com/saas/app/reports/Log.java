@@ -35,13 +35,12 @@ public class Log {
 		logger.fatal(desc);
 	}
 	
-	// Included with startTestReport
 	public static void startTest(String testName, String desc) {
 		logger.info("Start ********** " + testName + ": " + desc + " ********** Start");
 	}
-	// Included with endTestReport
+
 	public static void endTest(String testName, String desc) {
-		logger.info("End ********** " + testName + ": " + desc + " ********** End");
+		logger.info("End   ********** " + testName + ": " + desc + " ********** End");
 	}
 	
 }

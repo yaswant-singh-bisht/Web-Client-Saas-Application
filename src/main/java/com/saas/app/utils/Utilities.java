@@ -14,6 +14,7 @@ import java.util.Properties;
 
 import org.apache.commons.io.FileUtils;
 import org.openqa.selenium.InvalidSelectorException;
+import org.openqa.selenium.Keys;
 import org.openqa.selenium.OutputType;
 import org.openqa.selenium.TakesScreenshot;
 import org.openqa.selenium.WebDriver;
@@ -22,6 +23,7 @@ import org.openqa.selenium.WebElement;
 import org.openqa.selenium.interactions.Actions;
 import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.FluentWait;
+import org.openqa.selenium.support.ui.Select;
 import org.openqa.selenium.support.ui.Wait;
 import org.openqa.selenium.support.ui.WebDriverWait;
 import com.saas.app.base.LaunchEnv;
@@ -30,9 +32,11 @@ import com.saas.app.reports.Log;
 
 public class Utilities extends LaunchEnv {
 
-	public static String filePath;
-	public static FileInputStream file;
+	private static String filePath;
+	private static FileInputStream file;
 	public static Properties Config_Properties = loadProperties(Constants.ConfigPath);
+	private static Actions ac;
+	private static Select ss;
 
 	/***************************************************************************************
 	 * This method loads the property file in buffer
@@ -55,7 +59,7 @@ public class Utilities extends LaunchEnv {
 		return prop;
 	}
 
-	
+
 	/***************************************************************************************
 	 * This method will return date in String format as MM-dd-yyyy
 	 **************************************************************************************/
@@ -105,9 +109,9 @@ public class Utilities extends LaunchEnv {
 		return filePath;
 	}
 
-	
-	
-	
+
+
+
 	/*****************************************************************************************
 	 * This method will dynamically wait for an element to be visible on page
 	 ****************************************************************************************/
@@ -137,7 +141,6 @@ public class Utilities extends LaunchEnv {
 	 * This method will encrypt password
 	 **************************************************************************************/
 	public static String encryptPassword(String decryptedPassword) {
-		Log.info("Encrypting password");
 		String encodedBytes = Base64.getEncoder().encodeToString(decryptedPassword.getBytes());
 		return encodedBytes;
 	}
@@ -146,7 +149,6 @@ public class Utilities extends LaunchEnv {
 	 * This method will decrypt password
 	 **************************************************************************************/
 	public static String decryptPassword(String encryptedPassword) {
-		Log.info("Decrpted text");
 		byte[] decryptedPasswordBytes = Base64.getDecoder().decode(encryptedPassword);
 		String decryptedPassword = new String(decryptedPasswordBytes);
 		return decryptedPassword;
@@ -156,17 +158,49 @@ public class Utilities extends LaunchEnv {
 	 * This method will perform mouse hover action
 	 **************************************************************************************/
 	public static void mouseHover(WebElement element) {
-		Log.info("Mouse hover action");
-		Actions ac = new Actions(driver);
+		ac = new Actions(driver);
 		ac.moveToElement(element);
+	}
+
+	/***************************************************************************************
+	 * This method will perform single select action on dropdown by visible text
+	 **************************************************************************************/
+	public static void dropdownSingleSelectByVisibleText (WebElement element, String visibleText) {
+		ss = new Select(element);
+		if (visibleText.length() > 0) {
+			ss.selectByVisibleText(visibleText);
+		}
+	}
+	/***************************************************************************************
+	 * This method will perform single select action on dropdown by index
+	 **************************************************************************************/
+	public static void dropdownSingleSelectByIndex (WebElement element, int index) {
+		ss = new Select(element);
+		ss.selectByIndex(index);
+	}
+
+	/***************************************************************************************
+	 * This method will select a single value from Dropdown within DIV
+	 **************************************************************************************/
+	public static void dropdownSingleSelectDIV(WebElement element, int elementValueNo, String direction_Up_Down) {
+		ac = new Actions(driver);
+		ac.click(element).build().perform();
+		for(int i = 1; i<=elementValueNo; i++) {
+			if (direction_Up_Down.equalsIgnoreCase("up")) {
+				ac.sendKeys(Keys.UP).build().perform();
+			}
+			else if (direction_Up_Down.equalsIgnoreCase("down")){
+				ac.sendKeys(Keys.DOWN).build().perform();
+			} else {
+			}
+		}
+		ac.sendKeys(Keys.ENTER).build().perform();
 	}
 
 	
 	
-	
-	
-	
-	
+
+
 	/*******************************************************************************************
 	 * This method will clean the framework and will delete the files and folder for
 	 * specific time duration
@@ -185,9 +219,9 @@ public class Utilities extends LaunchEnv {
 			}
 		}
 	}
-	
-	
-	
-	
-	
+
+
+
+
+
 }

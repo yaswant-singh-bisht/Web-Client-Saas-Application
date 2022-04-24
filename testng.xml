@@ -4,9 +4,9 @@
   <test thread-count="1" name="WebClientSaasAppTest">
     <classes>
       <class name="com.saas.app.testCases.TC_LoginPage"/>
-      <class name="com.saas.app.testCases.TC_HomePage"/>
+      <!-- <class name="com.saas.app.testCases.TC_HomePage"/> -->
       <class name="com.saas.app.testCases.TC_ContactsPage"/>
-      <class name="com.saas.app.testCases.TC_LogoutPage"/>
+     <class name="com.saas.app.testCases.TC_LogoutPage"/>
     </classes>
   </test> <!-- WebClientSaasAppTest -->
 </suite> <!-- WebClientSaasAppSuite -->

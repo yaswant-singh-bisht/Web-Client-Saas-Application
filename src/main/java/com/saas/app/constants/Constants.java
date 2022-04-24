@@ -4,13 +4,17 @@ import com.saas.app.utils.Utilities;
 
 public class Constants {
 	
+	// Driver
+		public static final String ChromeDriverPath = System.getProperty("user.dir")+"\\Drivers\\chromedriver.exe";
+		public static final String MSEdgeDriverPath = System.getProperty("user.dir")+"\\Drivers\\msedgedriver.exe";
+		public static final String FirefoxDriverPath = System.getProperty("user.dir")+"\\Drivers\\geckodriver.exe";
+		
 	// Config file
 	public static final String ConfigPath = System.getProperty("user.dir")+"\\src\\test\\resources\\ProjectRepository\\Config.properties";
 	
-	// Driver
-	public static final String ChromeDriverPath = System.getProperty("user.dir")+"\\Drivers\\chromedriver.exe";
-	public static final String MSEdgeDriverPath = System.getProperty("user.dir")+"\\Drivers\\msedgedriver.exe";
-	public static final String FirefoxDriverPath = System.getProperty("user.dir")+"\\Drivers\\geckodriver.exe";
+	// Test Data Excel File
+	public static final String ExcelDataProvidePath = System.getProperty("user.dir")+"\\src\\test\\resources\\TestData\\DataProvider.xlsx";
+	public static final String CreateNewConstantSheetName = "Contacts";
 	
 	// Extent Report
 	public static final String ReportOutputPath = System.getProperty("user.dir")+"\\Execution Reports\\"+Utilities.getDate()+"\\"+Utilities.getDatetime()+".html";

@@ -8,13 +8,13 @@ import com.saas.app.reports.Report;
 public class TC_LogoutPage extends BaseClass {
 	
 	@Test
-	public static void logoutPageTest() throws InterruptedException {
-		Report.startTestReport("TC_LogoutPage", "Verify that logout is successful and user is redirected to login page");
+	public static void logoutPageTest() {
+		Report.startTestReport("TC_LogoutPage", "Verify logout page");
 		
 		LogoutPage lp = new LogoutPage(driver);
 		lp.logout();
 		
-		Report.endTestReport("TC_LogoutPage", "Verify that logout is successful and user is redirected to login page");
+		Report.endTestReport("TC_LogoutPage", "Verify logout page");
 		
 	}
 }

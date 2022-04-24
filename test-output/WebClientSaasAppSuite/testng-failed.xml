@@ -3,13 +3,13 @@
 <suite thread-count="1" name="Failed suite [WebClientSaasAppSuite]" guice-stage="DEVELOPMENT">
   <test thread-count="1" name="WebClientSaasAppTest(failed)">
     <classes>
-      <class name="com.saas.app.testCases.TC_LogoutPage">
+      <class name="com.saas.app.testCases.TC_ContactsPage">
         <methods>
-          <include name="logoutPageTest"/>
           <include name="shutDownEnvironment"/>
+          <include name="valCreateNewContact" invocation-numbers="1"/>
           <include name="initEnvironment"/>
         </methods>
-      </class> <!-- com.saas.app.testCases.TC_LogoutPage -->
+      </class> <!-- com.saas.app.testCases.TC_ContactsPage -->
     </classes>
   </test> <!-- WebClientSaasAppTest(failed) -->
 </suite> <!-- Failed suite [WebClientSaasAppSuite] -->
