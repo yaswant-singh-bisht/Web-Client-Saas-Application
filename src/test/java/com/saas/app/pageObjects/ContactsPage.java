@@ -27,16 +27,6 @@ public class ContactsPage extends BaseClass {
 		@CacheLookup
 		WebElement txtLastName;
 		
-		// Create Contacts - Status
-		@FindBy(xpath = "//div[@name='status']//i[@class='dropdown icon']")
-		@CacheLookup
-		WebElement cmbStatus;
-		
-		// Create Contacts - DoNotCall
-		@FindBy(xpath = "//div[@class='ui toggle checkbox']//label[contains(text(),'Do not Call')]")
-		@CacheLookup
-		WebElement chkDoNotCall;
-		
 		// Create Contacts - Save button
 		@FindBy(xpath = "//i[@class='save icon']")
 		@CacheLookup
@@ -62,12 +52,6 @@ public class ContactsPage extends BaseClass {
 			txtFirstName.sendKeys(firstName);
 			txtLastName.clear();
 			txtLastName.sendKeys(lastName);
-//			try {
-//				cp.setStatus();
-//			} catch (Exception e) {
-//				e.printStackTrace();
-//			}
-//			chkDoNotCall.click();
 			
 			btnSave.click();
 
