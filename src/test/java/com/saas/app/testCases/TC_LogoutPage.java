@@ -20,9 +20,9 @@ public class TC_LogoutPage extends BaseClass {
 		Boolean flag = loginPg.isEmailExists();
 		
 		if (flag) {
-			Report.pass("TC_LogoutPage", "Verify logout page", false);
+			Report.pass("Validate Logout", "User logged-out successfully.", false);
 		} else {
-			Report.fail("TC_LogoutPage", "Verify logout page", true);
+			Report.fail("Validate Logout", "User could not logged-out.", true);
 		}
 		
 		Assert.assertTrue(flag);

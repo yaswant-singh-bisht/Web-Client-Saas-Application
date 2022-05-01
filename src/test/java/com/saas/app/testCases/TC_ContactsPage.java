@@ -31,9 +31,9 @@ public class TC_ContactsPage extends BaseClass {
 		String fullName = cp1.isContactCreated();
 		
 		if (fullName.equalsIgnoreCase(FName+" "+LName)) {
-			Report.pass("TC_ContactsPage", "Verify Contacts page", false);
+			Report.pass("Validate Contact Created", "Contact created successfully for " + fullName + ".", false);
 		} else {
-			Report.fail("TC_ContactsPage", "Verify Contacts page", true);
+			Report.fail("Validate Contact Created", "Contact could not be created for " + fullName + ".", true);
 		}
 		
 		Assert.assertEquals(fullName, FName+" "+LName);

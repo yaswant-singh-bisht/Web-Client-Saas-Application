@@ -20,9 +20,9 @@ public class TC_LoginPage extends BaseClass {
 		HomePage hp = new HomePage(driver);
 		boolean present = hp.isUserNameExists();		
 		if (present) {
-			Report.pass("TC_LoginPage", "Verify Login page", false);
+			Report.pass("Validate Login", "User logged-in successfully.", false);
 		} else {
-			Report.fail("TC_LoginPage", "Verify Login page", true);
+			Report.fail("Validate Login", "User could not log-in.", true);
 		}
 		
 		Assert.assertTrue(present);
