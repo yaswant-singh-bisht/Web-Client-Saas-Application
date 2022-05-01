@@ -20,7 +20,7 @@ public class TC_ContactsPage extends BaseClass {
 	
 	@Test (dataProvider = "newContact")
 	public void valCreateNewContact(String FName, String LName) throws InterruptedException {
-		Report.startTestReport("TC_ContactsPage", "Verify Contacts page");
+		Report.startTest("TC_ContactsPage", "Verify Contacts page");
 
 		ContactsPage cp = new ContactsPage(driver);
 		cp.createNewContact(FName, LName);
@@ -29,8 +29,15 @@ public class TC_ContactsPage extends BaseClass {
 		
 		ContactsPage cp1 = new ContactsPage(driver); // Reinitializing page object so that saved value is considered
 		String fullName = cp1.isContactCreated();
+		
+		if (fullName.equalsIgnoreCase(FName+" "+LName)) {
+			Report.pass("TC_ContactsPage", "Verify Contacts page", false);
+		} else {
+			Report.fail("TC_ContactsPage", "Verify Contacts page", true);
+		}
+		
 		Assert.assertEquals(fullName, FName+" "+LName);
 		
-		Report.endTestReport("TC_ContactsPage", "Verify Contacts page");
+		Report.endTest("TC_ContactsPage", "Verify Contacts page");
 	}
 }

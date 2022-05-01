@@ -11,16 +11,23 @@ public class TC_LogoutPage extends BaseClass {
 	
 	@Test
 	public static void logoutPageTest() {
-		Report.startTestReport("TC_LogoutPage", "Verify logout page");
+		Report.startTest("TC_LogoutPage", "Verify logout page");
 		
 		LogoutPage logoutPg = new LogoutPage(driver);
 		logoutPg.logout();
 		
 		LoginPage loginPg = new LoginPage(driver);
 		Boolean flag = loginPg.isEmailExists();
+		
+		if (flag) {
+			Report.pass("TC_LogoutPage", "Verify logout page", false);
+		} else {
+			Report.fail("TC_LogoutPage", "Verify logout page", true);
+		}
+		
 		Assert.assertTrue(flag);
 		
-		Report.endTestReport("TC_LogoutPage", "Verify logout page");
+		Report.endTest("TC_LogoutPage", "Verify logout page");
 		
 	}
 }

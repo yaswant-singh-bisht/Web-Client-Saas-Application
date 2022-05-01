@@ -8,11 +8,11 @@ public class TC_HomePage extends BaseClass {
 
 	@Test
 	public static void homePageTest() throws InterruptedException {
-		Report.startTestReport("TC_HomePage", "Verify Home page");
+		Report.startTest("TC_HomePage", "Verify Home page");
 
 		
 		
-		Report.endTestReport("TC_HomePage", "Verify Home page");
+		Report.endTest("TC_HomePage", "Verify Home page");
 		
 	}
 }

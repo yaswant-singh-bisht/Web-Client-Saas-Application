@@ -1,14 +1,21 @@
-[INFO] [24-04-2022 10:26:08] Loading properties for D:\Selenium\Web Client Saas Application\src\test\resources\ProjectRepository\Config.properties
-[INFO] [24-04-2022 10:26:08] Launching browser: firefox
-[INFO] [24-04-2022 10:26:43] Browser launched successfully
-[INFO] [24-04-2022 10:26:43] Launching URL: https://ui.freecrm.com/
-[INFO] [24-04-2022 10:26:46] URL launched successfully
-[INFO] [24-04-2022 10:26:47] Start ********** TC_LoginPage: Verify Login page ********** Start
-[INFO] [24-04-2022 10:26:54] End   ********** TC_LoginPage: Verify Login page ********** End
-[INFO] [24-04-2022 10:26:57] Start ********** TC_ContactsPage: Verify Contacts page ********** Start
-[INFO] [24-04-2022 10:27:02] End   ********** TC_ContactsPage: Verify Contacts page ********** End
-[INFO] [24-04-2022 10:27:02] Start ********** TC_ContactsPage: Verify Contacts page ********** Start
-[INFO] [24-04-2022 10:27:07] End   ********** TC_ContactsPage: Verify Contacts page ********** End
-[INFO] [24-04-2022 10:27:07] Start ********** TC_LogoutPage: Verify logout page ********** Start
-[INFO] [24-04-2022 10:27:08] Closing driver instance
-[INFO] [24-04-2022 10:27:14] Driver closed successfully
+[INFO] [01-05-2022 04:45:13] Loading properties for D:\Selenium\Web Client Saas Application\src\test\resources\ProjectRepository\Config.properties
+[INFO] [01-05-2022 04:45:13] Launching browser: firefox
+[INFO] [01-05-2022 04:45:20] Browser launched successfully
+[INFO] [01-05-2022 04:45:20] Launching URL: https://ui.freecrm.com/
+[INFO] [01-05-2022 04:45:23] URL launched successfully
+[INFO] [01-05-2022 04:45:23] Execution started for --> Web Client Saas Application Test
+[INFO] [01-05-2022 04:45:23] valLoginPageTest test started...
+[INFO] [01-05-2022 04:45:23] Start ********** TC_LoginPage: Verify Login page ********** Start
+[INFO] [01-05-2022 04:45:28] valLoginPageTest test passed...
+[INFO] [01-05-2022 04:45:28] valCreateNewContact test started...
+[INFO] [01-05-2022 04:45:28] Start ********** TC_ContactsPage: Verify Contacts page ********** Start
+[INFO] [01-05-2022 04:45:33] valCreateNewContact test passed...
+[INFO] [01-05-2022 04:45:33] valCreateNewContact test started...
+[INFO] [01-05-2022 04:45:33] Start ********** TC_ContactsPage: Verify Contacts page ********** Start
+[INFO] [01-05-2022 04:45:37] valCreateNewContact test passed...
+[INFO] [01-05-2022 04:45:37] logoutPageTest test started...
+[INFO] [01-05-2022 04:45:37] Start ********** TC_LogoutPage: Verify logout page ********** Start
+[INFO] [01-05-2022 04:45:38] logoutPageTest test passed...
+[INFO] [01-05-2022 04:45:38] Execution completed for --> Web Client Saas Application Test
+[INFO] [01-05-2022 04:45:38] Closing driver instance
+[INFO] [01-05-2022 04:45:42] Driver closed successfully

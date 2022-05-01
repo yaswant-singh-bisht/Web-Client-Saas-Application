@@ -12,15 +12,21 @@ public class TC_LoginPage extends BaseClass {
 	
 	@Test
 	public static void valLoginPageTest() {
-		Report.startTestReport("TC_LoginPage", "Verify Login page");
+		Report.startTest("TC_LoginPage", "Verify Login page");
 		
 		LoginPage lp = new LoginPage(driver);
 		lp.login();
 
 		HomePage hp = new HomePage(driver);
 		boolean present = hp.isUserNameExists();		
+		if (present) {
+			Report.pass("TC_LoginPage", "Verify Login page", false);
+		} else {
+			Report.fail("TC_LoginPage", "Verify Login page", true);
+		}
+		
 		Assert.assertTrue(present);
 		
-		Report.endTestReport("TC_LoginPage", "Verify Login page");
+		Report.endTest("TC_LoginPage", "Verify Login page");
 	}
 }
